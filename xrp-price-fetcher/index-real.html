@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Michell Jagec @github, @dribbble">
+    <meta name="description" content="A simple Ripple token price fetcher and a converter">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>XRP Price Fetcher</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" type="image/jpg" href="style/images/favicon.svg">
+  </head>
+  <body>
+    <img src="style/images/logotype.svg" class="logotype" alt="Logotype">
+    <section class="main-frame">
+      <div class="price-wrapper">
+        <h1 id="price-title">Current Price</h1>
+        <div id="display-xrp-price"></div>
+        <p id="currency-append">GBP</p>
+        <p id="per-token">Per token</p>
+      </div>
+      <div class="input-wrapper">
+        <form autocomplete="off">
+          <input type="number" id="amount" name="amount" class="input-field" placeholder="Enter XRP amount!">
+          <input type="button" value="Submit!" onClick="exchange()" class="exchange-button">
+        </form>
+      </div>
+      <div class="result-wrapper">
+        <div id="result"></div>
+        <p id="result-currency">GBP</p>
+      </div>
+    </section>
+  </body>
+  <script src='fetch-xrp.js'></script>
+</html>
+
