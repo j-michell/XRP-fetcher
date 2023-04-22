@@ -1,0 +1,488 @@
+@import "viewports.scss"
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+  
+$font: 'Poppins', sans-serif
+
+/* General *\
+html
+  scroll-behavior: smooth
+
+body
+  margin: 0
+  height: 100vh
+  background-image: url("/style/images/main-background.svg")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
+*, *:before, *:before
+  box-sizing: border-box
+
+
+.logotype
+  position: absolute
+  top: 121px
+  left: 50%
+  transform: translateX(-50%)
+
+  @include media(">=tablet", "<=1024px")
+    width: 306px
+    top: 242px
+  
+  @include media(">=1024px", "<1900px")
+    width: 102px
+    top: 80.66px
+
+  @include media(">=1950px", "<=3840px")
+    width: 242px
+    top: 306px
+
+.main-frame
+  position: absolute
+  width: 479px
+  height: 418px
+  border-radius: 55px
+  top: 268px
+  left: 50%
+  transform: translateX(-50%)
+
+  background: rgba(255, 255, 255, 0.3)
+  backdrop-filter: blur(45px)
+
+  @include media(">=tablet", "<=1024px")
+    width: 718px
+    height: 627px
+    top: 536px
+    border-radius: 82.5px
+
+  @include media(">=1024px", "<1900px")
+    width: 319.33px
+    height: 278.66px
+    border-radius: 36.66px
+    top: 178.66px
+
+  @include media(">=1950px", "<=3840px")
+    width: 958px
+    height: 836px
+    border-radius: 82.5px
+    top: 536px
+
+.price-wrapper
+  position: absolute
+  height: 116px
+  width: 445px
+  left: 0px
+  top: 47px
+  border-radius: 32px
+  left: 50%
+  transform: translateX(-50%)
+
+  background: #FFFFFF
+  border-radius: 32px
+
+  filter: drop-shadow(0px 7px 15px rgba(0, 0, 0, 0.25))
+
+  @include media(">=tablet", "<=1024px")
+    height: 174px
+    width:  667.5px
+    border-radius: 48px
+
+  @include media(">=1024px", "<1900px")
+    height: 77.33px
+    width:  303.33px
+    border-radius: 21.33px
+    top: 31.33px
+
+  @include media(">=1950px", "<=3840px")
+    height: 232px
+    width:  890px
+    border-radius: 64px
+    top: 94px
+    
+  #price-title
+
+    position: absolute
+    top: 32px
+    left: 13px
+    bottom: 29px
+    right: 261px
+
+    font-family: $font
+    font-style: normal
+    font-weight: bold
+    font-size: 24px
+    line-height: 28px
+
+    display: flex
+    align-items: center
+    text-align: center
+
+    color: #000000
+
+    @include media(">=tablet", "<=1024px")
+      font-size: 36px
+
+    @include media(">=1024px", "<1900px")
+      font-size: 16px
+      width: 100%
+      margin: 0
+
+    @include media(">=1950px", "<=3840px")
+      font-size: 48px
+      width: 100%
+      margin: 0
+
+  #display-xrp-price
+    position: absolute
+    margin: 0
+    left: 273px
+    right: 35.78px
+    top: 28px
+    bottom: 41.94px
+
+    font-family: $font
+    font-style: normal
+    font-weight: 500
+    font-size: 24px
+    line-height: 38px
+
+    display: flex
+    align-items: center
+    text-align: right
+    letter-spacing: 0.75px
+
+    color: #14142B
+
+    @include media(">=tablet", "<=1024px")
+      font-size: 36px
+      left: 409.5px
+      right: 53.67px
+      top: 42px
+      bottom: 62.91px
+
+    @include media(">=1024px", "<1900px")
+      font-size: 16px
+      left: 182px
+      right: 23.85px
+      top: 18.66px
+      bottom: 27.96px
+
+    @include media(">=1950px", "<=3840px")
+      font-size: 48px
+      left: 546px
+      right: 71.56px
+      top: 56px
+      bottom: 83.88px
+
+  #currency-append
+    position: absolute
+    margin: 0
+    left: 363px
+    right: 35.78px
+    top: 28px
+    bottom: 41.94px
+
+    font-family: $font
+    font-style: normal
+    font-weight: 600
+    font-size: 24px
+    line-height: 38px
+
+    display: flex
+    align-items: center
+    text-align: right
+    letter-spacing: 0.75px
+
+    color: #14142B
+
+    @include media(">=tablet", "<=1024px")
+      left: 544.5px
+      right: 53.67px
+      top: 42px
+      bottom: 62.91px
+
+      font-size: 36px
+
+    @include media(">=1024px", "<1900px")
+      left: 242px
+      right: 23.85px
+      top: 18.66px
+      bottom: 27.96px
+
+      font-size: 16px
+
+    @include media(">=1950px", "<=3840px")
+      left: 726px
+      right: 71.56px
+      top: 56px
+      bottom: 83.88px
+
+      font-size: 48px
+
+  #per-token
+    position: absolute
+    margin: 0
+    width: 90px
+    height: 26px
+    left: 319px
+    top: 63px
+    bottom: 27px
+    right: 36px
+
+    font-family: $font
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 34px
+
+    display: flex
+    align-items: center
+    text-align: right
+    letter-spacing: 0.75px
+
+    color: #FD4CD6
+
+    @include media(">=tablet", "<=1024px")
+      left: 478.5px
+      top: 105px
+      
+      font-size: 27px
+      line-height: 51px
+      width: 135px
+
+    @include media(">=1024px", "<1900px")      
+      left: 212.66px
+      top: 42px
+      
+      font-size: 12px
+      line-height: 22.66px
+
+    @include media(">=1950px", "<=3840px")
+      width: 100%
+      left: 638px
+      top: 140px
+      
+      font-size: 36px
+
+
+.input-field
+  position: absolute
+  margin: 0
+  
+  height: 64px
+  width: 313px
+  top: 227px
+  left: 20px
+
+  font-family: $font
+  text-align: center
+  font-size: 18px
+  font-weight: 500
+  line-height: 34px
+
+  background-color: #EFF0F6
+  color: #FD4CD6
+  border: none
+  border-radius: 15px;
+
+  filter: drop-shadow(0px 7px 15px rgba(0, 0, 0, 0.25))
+
+  transition: border 0.2s
+
+  @include media(">=tablet", "<=1024px")
+    height: 96px
+    width: 469.5px
+    top: 340.5px
+    left: 30px
+    border-radius: 22.5px
+
+  @include media(">=1024px", "<1900px")  
+    height: 42.66px
+    width: 208.66px
+    top: 152px
+    left: 13.33px
+    border-radius: 10px
+
+    font-size: 12px
+
+  @include media(">=1950px", "<=3840px")
+    height: 128px
+    width: 626px
+    top: 454px
+    left: 40px
+    border-radius: 30px
+
+    font-size: 36px
+
+
+/* Chrome, Safari, Edge, Opera */
+.input-field::-webkit-outer-spin-button,
+.input-field::-webkit-inner-spin-button 
+  -webkit-appearance: none
+  margin: 0
+
+/* Firefox */
+.input-field[type=number] 
+  -moz-appearance: textfield
+
+
+.input-field:focus
+  border: 3px solid #FD4CD6  
+
+.result-wrapper
+  position: absolute
+  margin: 0
+  height: 64px
+  width: 114px
+  left: 345px
+  top: 227px
+  border-radius: 15px
+
+
+  background-color: #EFF0F6
+
+  filter: drop-shadow(0px 7px 15px rgba(0, 0, 0, 0.25))
+
+  @include media(">=tablet", "<=1024px")
+    height: 96px
+    width: 171px
+    left: 517.5px
+    top: 340.5px
+    border-radius: 22.5px
+
+  @include media(">=1024px", "<1900px")  
+    height: 42.66px
+    width: 76px
+    left: 230px
+    top: 151.33px
+    border-radius: 10px
+
+  @include media(">=1950px", "<=3840px")
+    height: 128px
+    width: 228px
+    left: 690px
+    top: 454px
+    border-radius: 30px
+
+  #result
+    position: absolute
+    left: 50%
+    transform: translatex(-50%)
+
+    font-family: $font
+    font-style: normal
+    font-weight: 600
+    font-size: 18px
+    line-height: 38px
+ 
+    display: flex
+    align-items: center
+    text-align: center
+    letter-spacing: 0.75px
+
+    color: #14142B
+
+    @include media(">=tablet", "<=1024px")
+      font-size: 27px
+      line-height: 57px
+
+    @include media(">=1024px", "<1900px") 
+      font-size: 12px
+      line-height: 25.33px
+
+    @include media(">=1950px", "<=3840px")
+      font-size: 36px
+      line-height: 76px
+
+  #result-currency
+    position: absolute
+    margin: 0
+    width: 37px
+    height: 26px
+    top: 32px
+    left: 50%
+    transform: translatex(-50%)
+
+    font-family: $font
+    font-style: normal
+    font-weight: normal
+    font-size: 18px
+    line-height: 34px
+
+    display: flex;
+    align-items: center
+    text-align: center
+    letter-spacing: 0.75px
+
+    color: #FD4CD6
+
+    @include media(">=tablet", "<=1024px")
+      width: 55.5px
+      height: 39px
+      top: 48px
+
+      font-size: 27px
+      line-height: 51px
+
+    @include media(">=1024px", "<1900px") 
+      width: 24.66px
+      height: 17.33px
+      top: 21.33px
+
+      font-size: 12px
+      line-height: 22.66px
+
+    @include media(">=1950px", "<=3840px")
+      width: 74px
+      height: 52px
+      top: 64px
+
+      font-size: 36px
+      line-height: 68px
+
+.exchange-button
+  position: absolute
+  margin: 0
+  height: 36px
+  width: 104px
+  top: 344px
+  left: 50%
+  transform: translatex(-50%)
+  border-radius: 25px
+
+  border: none
+
+  font-family: $font
+  font-style: normal
+  font-weight: bold
+  font-size: 12px
+  line-height: 28px
+
+  align-items: center !important
+  text-align: center !important
+
+  background-color: #FFFFFF
+
+  @include media(">=tablet", "<=1024px")
+    height: 72px
+    width: 208px
+    top: 516px
+    border-radius: 50px
+
+    font-size: 18px
+
+  @include media(">=1024px", "<1900px")    
+    height: 24px
+    width: 69.33px
+    top: 229.33px
+    border-radius: 12.5px
+
+    font-size: 8px
+
+  @include media(">=1950px", "<=3840px")
+    height: 72px
+    width: 208px
+    top: 688px
+    border-radius: 50px
+
+    font-size: 24px
