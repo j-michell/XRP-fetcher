@@ -34,4 +34,3 @@ function exchange() {
 }
 
 fetchXrp();
-return `<p>Temperature: ${temp}</p>`
